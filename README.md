@@ -161,3 +161,6 @@ public class Control : MonoBehaviour
 }
 
 ```
+
+* La aplicacion recibe 12 bytes del microcontrolador, los cuales son el roll (movimiento en el eje z), el pitch (movimiento del eje x) y el yaw, pero como el funcionamiento actual es con el acelerometro no es funcional el movimiento del yaw. El programa manda en cada frame un comando para que el microcontrolador haga la lectura y una vez se lee la cantidad exacta de bytes el pitch se almacena en la variable nz, el negativo de roll en la variable nx y los ultimos 4 bytes se almacenan en la variable ny; luego estos valores se pasan a la funcion rotacion para transformar el movimiento del cubo.
+
